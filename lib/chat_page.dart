@@ -1,3 +1,4 @@
+import 'package:chat_app/widgets/chat_bubble.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -22,114 +23,20 @@ class ChatPage extends StatelessWidget {
         ],
 
       ),
-      body: ListView(
+      body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              ),
+          Expanded(
+            child: ListView(
+              children: [
+                ChatBubble(
+                    alignment: Alignment.centerRight,
+                    message: "Hi amiru"),
+                ChatBubble(
+                    alignment: Alignment.centerLeft,
+                    message: "yow")
+              ],
             ),
-
-            child: Text(
-              "This is your msg",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-
           ),
-          Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              ),
-            ),
-
-            child: Text(
-              "This is your msg",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-
-          ),
-          Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              ),
-            ),
-
-            child: Text(
-              "This is your msg",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-
-          ),
-          Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              ),
-            ),
-
-            child: Text(
-              "This is your msg",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-
-          ),
-          Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              ),
-            ),
-
-            child: Text(
-              "This is your msg",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-
-          ),
-
           Container(
             height: 100,
             margin: EdgeInsets.only(bottom: 0),
@@ -138,20 +45,22 @@ class ChatPage extends StatelessWidget {
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
               children: [
                 IconButton(onPressed: (){
-
+                  print("add");
                 },
                   icon: Icon(Icons.add),
                   color: Colors.white,
                 ),
 
                 IconButton(onPressed: (){
-
+                  print("send");
                 },
                   icon: Icon(Icons.send),
                   color: Colors.white,
-                  padding: EdgeInsets.only(left: 300),
+
                 ),
               ],
             ),

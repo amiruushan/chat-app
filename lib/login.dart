@@ -17,38 +17,42 @@ class Login extends StatelessWidget {
       ),
 
 
-      body: Column(
-        children: [
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
 
-          Text("Let's sign you in!!",
-            style:TextStyle(
-              fontSize: 30,
-              color: Colors.brown,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1,
+          children: [
+            Text("Let's sign you in!!",
+              style:TextStyle(
+                fontSize: 30,
+                color: Colors.brown,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1,
+              ),
             ),
-          ),
 
-          Text('Welcome back!! You\'v been missed',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.blueGrey
+            Text('Welcome back!!\n You\'v been missed',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey
+              ),
             ),
-          ),
 
-          Container(
-            child: FlutterLogo(),
-            height: 170,
-            width: 170,
-            padding: EdgeInsets.all(15),
-            margin: EdgeInsets.only(left: 80, right: 30, top: 40, bottom: 20),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(100)
-            ),
-          )
-        ],
+            Container(
+              child: FlutterLogo(),
+              height: 170,
+              width: 170,
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(100)
+              ),
+            )
+          ],
+        ),
       )
     );
   }
